@@ -1,16 +1,19 @@
 package model
 
-import "time"
+import (
+	"database/sql"
+	"time"
+)
 
 type User struct {
 	UUID      string
 	Info      UserInfo
 	CreatedAt time.Time
-	UpdatedAt *time.Time
+	UpdatedAt sql.NullTime
 }
 
 type UserInfo struct {
-	First_name string
-	Last_name  string
-	Age        int64
+	FirstName string
+	LastName  string
+	Age       int64
 }
