@@ -1,8 +1,8 @@
 package user
 
 import (
-	desc "../../../pkg/user_v1"
-	"../../service"
+	"github.com/VictorNaniii/clean-arhitecture/internal/service"
+	desc "github.com/VictorNaniii/clean-arhitecture/pkg/user_v1"
 )
 
 type Implementation struct {

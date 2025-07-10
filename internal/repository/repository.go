@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"../model"
 	"context"
+	"github.com/VictorNaniii/clean-arhitecture/internal/model"
 )
 
 type UserRepository interface {

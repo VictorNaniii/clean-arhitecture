@@ -1,8 +1,8 @@
 package converter
 
 import (
-	"../../../model"
-	repoModel "../model"
+	"clean-arhitecture/internal/model"
+	repoModel "clean-arhitecture/internal/repository/user/model"
 	"time"
 )
 
@@ -11,7 +11,8 @@ func ToUserFromRepo(user *repoModel.User) *model.User {
 	if user.UpdatedAt.Valid {
 		updatedAt = &user.UpdatedAt.Time
 	}
-	return &model.User{UUID: user.UUID,
+	return &model.User{
+		UUID:      user.UUID,
 		Info:      ToUserInfoFromRepo(user.Info),
 		CreatedAt: user.CreatedAt,
 		UpdatedAt: updatedAt,
@@ -29,7 +30,7 @@ func ToUserInfoFromRepo(info repoModel.UserInfo) model.UserInfo {
 func ToUserInfoFromService(info *model.UserInfo) repoModel.UserInfo {
 	return repoModel.UserInfo{
 		FirstName: info.First_name,
-		LastName:  info.First_name,
+		LastName:  info.Last_name,
 		Age:       info.Age,
 	}
 }

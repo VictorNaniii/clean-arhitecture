@@ -1,8 +1,8 @@
 package service
 
 import (
-	"../model"
 	"context"
+	"github.com/VictorNaniii/clean-arhitecture/internal/model"
 )
 
 type UserService interface {
