@@ -1,9 +1,10 @@
 package converter
 
 import (
-	"clean-arhitecture/internal/model"
-	repoModel "clean-arhitecture/internal/repository/user/model"
 	"time"
+
+	"github.com/VictorNaniii/clean-arhitecture/internal/model"
+	repoModel "github.com/VictorNaniii/clean-arhitecture/internal/repository/user/model"
 )
 
 func ToUserFromRepo(user *repoModel.User) *model.User {

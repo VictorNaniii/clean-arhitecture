@@ -1,12 +1,12 @@
 include .env
 
-LOCAL_BIN := $(CURDIR)\bin
+LOCAL_BIN := $(CURDIR)/bin
 
 .PHONY: install-deps get-deps generate generate-path generate-user-api
 
 install-deps:
-	set GOBIN=$(LOCAL_BIN) && go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28.1
-	set GOBIN=$(LOCAL_BIN) && go install -mod=mod google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+	set GOBIN=$(LOCAL_BIN)&& go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28.1
+	set GOBIN=$(LOCAL_BIN)&& go install -mod=mod google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 
 get-deps:
 	go get -u google.golang.org/protobuf/cmd/protoc-gen-go

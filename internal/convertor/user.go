@@ -6,8 +6,8 @@ package convertor
 //	"google.golang.org/protobuf/types/known/timestamppb"
 //)
 import (
-	"clean-arhitecture/internal/model"
-	desc "clean-arhitecture/pkg/user_v1"
+	"github.com/VictorNaniii/clean-arhitecture/internal/model"
+	desc "github.com/VictorNaniii/clean-arhitecture/pkg/user_v1"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
@@ -35,7 +35,7 @@ func ToUserFromService(user *model.User) *desc.User {
 	return &desc.User{
 		Uuid:      user.UUID,
 		Info:      ToUserInfoToDesc(&user.Info),
-		CreatedAt: timestamppb.New(user.CreatedAt),
+		CreateAt:  timestamppb.New(user.CreatedAt),
 		UpdatedAt: updatedAt,
 	}
 }
